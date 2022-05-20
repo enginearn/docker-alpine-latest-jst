@@ -426,6 +426,20 @@ a21709ac7616: Pushed
 
 </details>
 
+<details>
+<summary>docker imageが削除できない時</summary>
+
+``` PowerShell
+$ docker rmi -f ee0a3a132b38
+Error response from daemon: conflict: unable to delete ee0a3a132b38 (cannot be forced) - image has dependent child images
+
+# docker rmi -f <REPOSITORY>:<TAG>で削除
+$ docker rmi -f enginearn/alpine:latest
+Untagged: enginearn/alpine:latest
+```
+
+</details>
+
 ---
 
 ## Ref
