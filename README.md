@@ -245,6 +245,8 @@ Tue May 17 08:07:25 JST 2022
 <details>
 <summary>doasをインストール</summary>
 
+[doas](https://wiki.archlinux.jp/index.php/Doas)
+
 ``` docker container
 / # apk add doas
 (1/1) Installing doas (6.8.1-r7)
@@ -414,13 +416,14 @@ $ docker exec -it -u docker_alpine alpine sh
 
 ``` PowerShell
 $ docker commit 4552f804710d enginearn/alpine-latest-jst
+sha256:9f09994f1e07442c4af0dd35bf1b5857ffdbf5af24871c5b64a823324da64bbc
 $ docker tag <IMAGE ID> enginearn/alpine-latest-jst
-$ docker push enginearn/alpine-latest-jst
-Using default tag: latest
-The push refers to repository [docker.io/enginearn/alpine-latest-jst]
-88e3f12bb0fe: Pushed
-a21709ac7616: Pushed
-4fc242d58285: Mounted from enginearn/getting-started 
+$ docker push enginearn/alpine-latest-jst:latest
+he push refers to repository [docker.io/enginearn/alpine-latest-jst]
+5f70bf18a086: Mounted from ambassador/telepresence-docker-runtime
+6b8a1ccd16ec: Pushed
+cc2447e1835a: Mounted from library/alpine
+latest: digest: sha256:351f0b586d90825f12f715f7079c24d9a66fde91f708fd557bde5ceca231e676 size: 946
 
 ```
 
