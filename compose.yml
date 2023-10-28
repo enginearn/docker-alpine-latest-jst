@@ -1,0 +1,12 @@
+services:
+  alpine:
+    build:
+      context: .
+    container_name: alpine-dev
+    stdin_open: true
+    tty: true
+    working_dir: /home/docker_alpine
+    volumes:
+      - .:/home/docker_alpine
+    ports:
+      - "8011:8011"
